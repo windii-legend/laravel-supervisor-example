@@ -14,4 +14,6 @@ RUN apt-get update \
     && docker-php-ext-install pdo_mysql pdo_pgsql \
     && apt-get install -y supervisor
 
+RUN docker-php-ext-install pcntl
+
 WORKDIR /var/www/html
